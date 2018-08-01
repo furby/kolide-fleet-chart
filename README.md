@@ -18,11 +18,11 @@ Follow the README.md for each sub-chart, install in this order:
 
 We can automate endpoint security monitoring with a combination of OSQuery Packs targeting IOCs:
 
-And a set of Index queries and alerts
+And a set of query packs:
 
 -   **Palantir OSQuery** : https://github.com/palantir/osquery-configuration
 -   **GSA Laptop Management** : https://github.com/GSA/laptop-management
--   **FaceBook OSQuery** : https://osquery.io/
+-   **FaceBook OSQuery** : https://osquery.io/chart    
 ===
 
 ![EUC Intelligence](./docs/fleet-intel-platform.png)

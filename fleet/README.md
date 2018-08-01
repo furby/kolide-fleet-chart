@@ -19,7 +19,7 @@ And a set of Index queries and alerts
 -   **FaceBook OSQuery** : https://osquery.io/
 
 
-![EUC Intelligence](./docs/fleet-intel-platform.png)
+![EUC Intelligence](../docs/fleet-intel-platform.png)
 
 The initial UseCase for the Fleet platform is
 -   Systematically monitor EUC (End User Compute) devices for IOCs
@@ -36,14 +36,14 @@ in order to maintain constant insight into the state of your infrastructure (sec
 https://kolide.com/fleet
 https://github.com/kolide/fleet/blob/master/docs/application/README.md
 
-![Kolide Diagram](./docs/kolide.png)
+![Kolide Diagram](../docs/kolide.png)
 
 #### Utilities
 
--   **Build agent installer packages**    [package-build.sh](./docs/package-build.sh)
--   **Import OSQuery Pack files**   [import.go](./docs/import.go)
+-   **Build agent installer packages**    [package-build.sh](../docs/package-build.sh)
+-   **Import OSQuery Pack files**   [import.go](../docs/import.go)
     Pack import tool examples: [Import examples](https://gist.github.com/marpaia/9e061f81fa60b2825f4b6bb8e0cd2c77)
--   **Files to run stuff on Minikube** [minikube-files](./docs/minikube/)
+-   **Files to run stuff on Minikube** [minikube-files](../docs/minikube/)
     **To run Elastic Stack on Minikube you must run the systcl pod to
     increase shmmax m.max_map_count=262166**
 

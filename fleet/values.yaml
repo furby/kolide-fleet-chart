@@ -1,0 +1,106 @@
+## Kolide Fleet properties
+image: "kolide/fleet"
+imageTag: "2.0.0-rc3"
+imagePullPolicy: IfNotPresent
+dnsHostName: "server.acme.example.com"
+fleetSvcNodePort: '31099'
+fleetSvcExtPort: '8081'
+fleetSvcTargetPort: '2024'
+fleet_parent_ca: |-
+      -----BEGIN CERTIFICATE-----
+      MIIFqDCCA5CgAwIBAgIgBSVbMpD4r78FLUJyfvQBqD7TNqkXZkmsgX/iqFDkf6kw
+      DQYJKoZIhvcNAQELBQAwfDELMAkGA1UEBhMCVVMxETAPBgNVBAoTCEFDTUUgSW5j
+      MS4wLAYDVQQLEyVBQ01FIFNlY3VyaXR5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5
+      MSowKAYDVQQDEyFBQ01FIFJPT1QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcN
+      MTgwODAxMjMyMzE5WhcNNDgwODAxMjMyMzE5WjB8MQswCQYDVQQGEwJVUzERMA8G
+      A1UEChMIQUNNRSBJbmMxLjAsBgNVBAsTJUFDTUUgU2VjdXJpdHkgQ2VydGlmaWNh
+      dGlvbiBBdXRob3JpdHkxKjAoBgNVBAMTIUFDTUUgUk9PVCBDZXJ0aWZpY2F0aW9u
+      IEF1dGhvcml0eTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAI3UXdaa
+      ixlG9dxOJuq16nYhl2+UvrBPxeHSawLwAjCfx3kmS6x3TvpLrgJyKozi/KhFJ5kc
+      m8QwXBXZM1GB+0wWuEfmIgmuEa1La9+oFFuIX8yxVKpx3b3bPX1Uxbq0tia6RbII
+      C4xjU/6V0UrFiCCnwAyr0k5GNLQFPVLa5hmJKpP2MZHWbnJINNyXLc2mObZfseF8
+      p9tDxdRKZMXK9Jr3iHQDFVFRPO0TVDv0Ssb6YgOfv6xU6Prvo7cVeZzXd5RMQtfD
+      vkH/3kDzhuLgOZGfy1OOmh9ci9NDJj78LcP+6uRGhWtDjGjc843F59hMVoPcE1Fh
+      5dNWqNWFLmctwq5IlTNK3ev4rhFu4r3WSOXSbJODJoxdU9E3CBX3cQY0T5aofvGZ
+      KjDBNvDc/2PYnwUtE0GpXdEfwSS7OjfABuAkOEf/7xo6itrtKd8R+VNMUzFMJ1pw
+      i/4519GkrpVKgtcaP/3d3kpXGphWNHEBkNSrknnnnwVnjpcYzKJTtQReoAnAVPh3
+      TMHaQcze4sXMw6DzwNSgsjU70nZ9ZnvJQBsIxDHGwOp1g2+AixF4RNFZThXHao8K
+      U8pVZPKfbbZlq2aVkBsONUeQ+Jx8Oz9hHsDQ9O1TQkIPVSa03g7Rrb7xHvZU+sZV
+      WXcUWFkSy2i6UwbGZlwPZtXo4Z9ioabfV6fhAgMBAAGjFjAUMBIGA1UdEwEB/wQI
+      MAYBAf8CAQAwDQYJKoZIhvcNAQELBQADggIBAC9Jgk2+Pj0JA6wtC0Vb+AdkdJa0
+      LjNoZftOBEfj+IJwVWJPQ4ExlE0Bs9msXq1QU2F1RcW6IU913PvcxGTOGTHt+hN4
+      eW81JXq8y9+C66QIHw6uTxx+mT2envLZcV6/1CTM6eMHYLCC3yCfngGoDPTwWZzS
+      PIlVDTtzFyKZmo//zlc8j2ntyPYqbCkGlzOuJFlhu26GzOURdEWu+520zEh4Fr+1
+      dJjxgZ6A9c3JATRCWs29pVUa/izecWXazswoUGcBHCPNYPRQ4h/U3p1NGDSpo7Ua
+      xUf1vG9CmJ4h2cCgr2n+y0P9wfNmyC/r35m50/h3dNuH5KUpclYWLJ4yF4AJV1TV
+      Roj2ni+BPtx7Zly0dPbknvle0F5o27BUt7je8KiZS2S4NLAuaJe6RgEZ0XONAOqL
+      MHsvkP9uHuHhTFwUHMe76k70rcv78+rFdNXNw7d0YdSz2PiJl9m6MNrcG0nYoTAE
+      5zmAp1em3dUqqtq6TbDB8VLTVzJU8kPRZSTcwDhGxOaqM5w0y5NmBalmb3Nt5mzu
+      UPafle3MIamZLI7wqs+Qgz0AaP+bndO9uRldI9ZfW/H6jI48RHFozI+ba1Po9LU8
+      rUBO7rxC6UjNWRngc25ose+bw3sPQoyxZMM8NfSmxq2QOWDpGPx+hYjjpWV86i5P
+      KH1I73IOD5meF5FZ
+      -----END CERTIFICATE-----
+fleet_cert: |-
+      -----BEGIN CERTIFICATE-----
+      MIIEwTCCAqmgAwIBAgIhANQ2AcO6sRupZlUPYInPqvTOSQvkypl/iJRZlm598PnA
+      MA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNVBAYTAlVTMREwDwYDVQQKEwhBQ01FIElu
+      YzEuMCwGA1UECxMlQUNNRSBTZWN1cml0eSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0
+      eTEqMCgGA1UEAxMhQUNNRSBST09UIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4X
+      DTE4MDgwMTIzMjUyNVoXDTIwMDgwMTIzMjUyNVowVzELMAkGA1UEBhMCVVMxETAP
+      BgNVBAoTCEFDTUUgSW5jMRMwEQYDVQQLEwpGbGVldC1QUk9EMSAwHgYDVQQDExdz
+      ZXJ2ZXIuYWNtZS5leGFtcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+      AQoCggEBAMW7p8Ellt8sElabs8+4btEXuRplws001wUNUSan09Buulh4WnzjND3C
+      K/SByaAtV0AoAWQvYa+lowMgnbZdP5s11S+xaqKntxQnpkXgN721Vf1Bm0OoZjDo
+      QHWbYk+FlkmLuFmJUss+Kqf/QW/TAyS6pYkdzQZtMgnYYffztGPeaHFPq7YbvZ+d
+      GpjoYXV3CLZkKJYX/v9o2d/PIBOes9Ry/BWxFVATamXk/K/tqLnLlU5GeQzDiB/H
+      rkFjWqgrl4c+rxONpZFqikYl37TSig4Bfmns+eOspD/XMLCjmHBoM1K+KEESHFzg
+      lQUh4n258J08poMmUAzjQ2jS2G6CE80CAwEAAaNTMFEwEwYDVR0lBAwwCgYIKwYB
+      BQUHAwEwCwYDVR0PBAQDAgSwMAwGA1UdEwEB/wQCMAAwHwYDVR0OBBgEFgQUdtDV
+      ay8hxuzo1XgJQ/w7aKpmfvcwDQYJKoZIhvcNAQELBQADggIBACUeA8epiRmUubMa
+      jg+XoyWaui8U01AV8LqFwPw3PEhHuKAQobKXLRm+6HyO84WfcAmIzb2YuPYGLIFA
+      e3ynKq9sVY12VYUYfvphUmw1noUigEweESU3uNJYdeB2ke8LG4pMpReJrLmZG12T
+      YaY5OYwIqY4lRbytgAtBmiv80D3st/SmPBbD+JLvuLIBVQhWThjcX71/y2/wjZWA
+      vgJ8oF5KlSmDf8OK87ZJI+vftzTD+OgBSHEoNmkDu5tEkxa1ATnAFneNDvddCJZl
+      UVR7tQWEwkle6XbjJzpcANaM7oZJYAcZt9upSd+gQybgFt5SS4djnmKiIp/icO/B
+      tmUi12qmIlLVYRfO44hY2VLcUMtXMeW1EIBM5SX/JJ/o/b9e3dahiTuNGG0+GQTh
+      kvH/YiFla9//3PMGQlwD7shX/JX2VSw2Oj3L9Kf574asTUZCxsicFBqVXgylrB28
+      bxcUEmVzKvPefxVqhP3/S3GtTBUbsjVHNjVGRkRPfjoogVQUMTf3kB8yI7rxDO2Z
+      wkuwlYefHzpvvSu/45dULzue0cewLKKM8jAwi9/2Zw1+iIY4V0jb2RVO7JuLveoG
+      u42zCjOJuWeTvyC89yCNWAZKMU2xShOGDwo8H6sEdUG7KuCUbp34HXlQkhr3p4AO
+      dwv/7n6l6jmAk3cOSHK6ymWcPxBj
+      -----END CERTIFICATE-----
+fleet_private_key: |-
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEAxbunwSWW3ywSVpuzz7hu0Re5GmXCzTTXBQ1RJqfT0G66WHha
+      fOM0PcIr9IHJoC1XQCgBZC9hr6WjAyCdtl0/mzXVL7Fqoqe3FCemReA3vbVV/UGb
+      Q6hmMOhAdZtiT4WWSYu4WYlSyz4qp/9Bb9MDJLqliR3NBm0yCdhh9/O0Y95ocU+r
+      thu9n50amOhhdXcItmQolhf+/2jZ388gE56z1HL8FbEVUBNqZeT8r+2oucuVTkZ5
+      DMOIH8euQWNaqCuXhz6vE42lkWqKRiXftNKKDgF+aez546ykP9cwsKOYcGgzUr4o
+      QRIcXOCVBSHifbnwnTymgyZQDONDaNLYboITzQIDAQABAoIBAQCRVCMv6pjA3nt7
+      /GRkP4HzXCRIKpLKkBOZOvhyGNetUjTT4WFgeP1khtoXk2zFtY1zMfQT1l9N4ce1
+      /Lrt1gtx4FcX/qYJdosw3RNwOCO/4w+YXCfpylORjqIRzmqrV9vlojOUW0Hm74Ia
+      h5lovwaIcEZKSQTvvEISyl73Br+GxhxyGMZA3yU/j5nxV325ECC/lyhLGYxzlSCM
+      Yjgcaj5TZYbbVjuDVMIMgCwGf6HAhjU0fVtLQLtZRD9EcuYGQF9Km6sYs+58VoMu
+      OT30bU/Vn1MAk2qKj+Cg2FJfiHwzIJGLPTKY4c1/fQqEj1BfLCjIQkn3KTpdYXfH
+      eT99lixhAoGBAPeBpNeHyin1shxUuZVX6fynvjZ2a0pamN0UJqtr2hveisQtaIDI
+      llpMBbsm2gMDkpBQ9UAm3N+YoB5lCI+yyWismf7Upbcz5a9YDZWpFoU37rw7DTz5
+      Bmcm6amLyBkCNFBGdas6MMav2UvTkEHBTAGy6PzQ0xqXgOudKYyqlX2fAoGBAMyE
+      v+pzmBTXAOyor/i2tjHbaiqTUDtQJqjQk0zojXnT9RbdzA0vxdMqkd7mrn76Kp41
+      o8sHV1aK+7kkU2yQEm6+GR1SxFkVbLUmJwVOjh6WIYJHgA5kPNHn8TW5GhtTAiih
+      JRUfmisb0QXAdi16auosIMy5PQyFb3799FhxHJ8TAoGADQSVnfx3ZqOUnabbJ/66
+      wN41w/mQhRWkyqP/sK54h1S6Kb1VrMhgGBm9h21wtA3hDJQlgh1JKr2FVnPr8lrt
+      +wJxCxU2Lh+dqg5QkJmXJKSfeukENjvG2XAThCZk/OO/yqUaFUp3PEwNes6C3OKE
+      0+YMGRgGsnRbhIj8oXhranMCgYAbuVMawRi4mnyxmBxipsID+C5oHxgdMjxLXhrZ
+      rhyfizAKLX7fur4iZf7oLHUzGU51q+fMOe6I+MYuztHQQad+A5777qBXQyQ9WjKn
+      8YIqe0eHlZGyYbws6Dg2hCUZ1yLPxyhzuJj5hwfKs9BRUer0W48GsYWpEN2QZXSe
+      GJc8qQKBgQDN/0ssTW4opo8qynuvwEfr0BeIJqX28P3XuWHE5alSMYIo6RuCSR/7
+      Nf0jOSRm/T6Dc/hToXSZ/0DdK5wA0OPEjuta55mJnZKS3TvO5D45AOTI3RUsdt0x
+      qWb0sQfv8TueUgBTTWFurhAy6tTbVPdHdchEdq42Z/9Z5ng/MeM0aA==
+      -----END RSA PRIVATE KEY-----
+fleet_authkey: a1tSSyCxKQSo4nQzZBfj6HB8tV+L31kr
+redispass: password
+
+# ## or issue a cert via let's encrypt
+# certmanager:
+#   issuer: letsencrypt-prod
+#   challengeProvider: http01

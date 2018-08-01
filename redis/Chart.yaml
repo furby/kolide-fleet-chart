@@ -1,0 +1,12 @@
+name: redis
+version: 3.2.1
+appVersion: 3.2.1
+description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+keywords:
+- redis
+- keyvalue
+- datastore
+maintainers:
+- name: gjyoung1974
+  email: gjyoung1974@gmail.com
+engine: gotpl

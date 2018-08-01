@@ -1,0 +1,82 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: fleet-redis
+  name: fleet-redis
+  namespace: fleet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fleet-redis
+  serviceName: fleet-redis
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fleet-redis
+    spec:
+      containers:
+      - args:
+        - /conf/bootstrap-pod.sh
+        command:
+        - sh
+        env:
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: redis:3.2.1
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - redis-cli -h $(hostname) ping
+          failureThreshold: 3
+          initialDelaySeconds: 20
+          periodSeconds: 3
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: redis-cluster
+        ports:
+        - containerPort: 6379
+          name: client
+          protocol: TCP
+        - containerPort: 16379
+          name: gossip
+          protocol: TCP
+        readinessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - redis-cli -h $(hostname) ping
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        volumeMounts:
+        - mountPath: /conf
+          name: conf
+        - mountPath: /redis-master-data
+          name: fleet-redis
+      volumes:
+      - name: fleet-redis
+        persistentVolumeClaim:
+          claimName: fleet-redis
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: redis.conf
+            path: redis.conf
+          - key: bootstrap-pod.sh
+            path: bootstrap-pod.sh
+          name: redis-cluster-config
+        name: conf
+---

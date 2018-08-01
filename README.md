@@ -23,7 +23,8 @@ And a set of query packs:
 -   **Palantir OSQuery** : https://github.com/palantir/osquery-configuration
 -   **GSA Laptop Management** : https://github.com/GSA/laptop-management
 -   **FaceBook OSQuery** : https://osquery.io/chart    
-===
+
+---    
 
 ![EUC Intelligence](./docs/fleet-intel-platform.png)
 

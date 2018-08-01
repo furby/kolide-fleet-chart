@@ -10,6 +10,12 @@ A flexible control server for osquery fleets. Fleet allows us query multiple hos
 
 -    **Elastic Stack** – Elasticsearch, Logstash and Kibana are tools that allow for the collection, normalizing and visualization of logs.
 
+#### TL;DR; How to install    
+Follow the README.md for each sub-chart, install in this order:    
+1. Install Redis chart        
+1. Install MySQL chart
+1. Install Fleet chart          
+
 We can automate endpoint security monitoring with a combination of OSQuery Packs targeting IOCs:
 
 And a set of Index queries and alerts
@@ -17,7 +23,7 @@ And a set of Index queries and alerts
 -   **Palantir OSQuery** : https://github.com/palantir/osquery-configuration
 -   **GSA Laptop Management** : https://github.com/GSA/laptop-management
 -   **FaceBook OSQuery** : https://osquery.io/
-
+===
 
 ![EUC Intelligence](./docs/fleet-intel-platform.png)
 

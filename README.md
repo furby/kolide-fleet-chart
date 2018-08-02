@@ -35,7 +35,7 @@ Systematically monitor EUC (End User Compute)
 -   Operations issues & support
 -   General fleet management & capacity management
 
-#### Kolide Fleet is an OSQuery TLS Service
+#### Kolide Fleet implements an OSQuery TLS Service
 
 Kolide Fleet is an Open Source Osquery Manager
 

@@ -8,7 +8,10 @@ Scheduled queries feed all of these results into a search Index. Osquery is even
 [Kolide Fleet](https://kolide.com/fleet)    
 A flexible control server for osquery fleets. Fleet allows us query multiple hosts on demand as well as create query packs, build schedules and manage the hosts in our environment.
 
--    **Elastic Stack** – Elasticsearch, Logstash and Kibana are tools that allow for the collection, normalizing and visualization of logs.
+-    **Elastic Stack** – Elasticsearch, Logstash and Kibana are tools that allow for the collection, normalizing and visualization of logs.    
+
+**This solution implies Kubernetes Operator Framework based ELK Stack** Fleet Output is fed into ELK via container native EFK FluentD sends the JSON formatted stdout and stderr to the k8s embedded elk stack. Therefore we do not include the ELK solution with this chart.     
+
 
 #### TL;DR; How to install    
 Follow the README.md for each sub-chart, install in this order:    

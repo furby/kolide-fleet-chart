@@ -1,4 +1,4 @@
-# Kolide Fleet k8s helm chart
+# Kolide Fleet k8s Helm Chart
 This chart is  a combination of tools, including Kolide's Fleet OSQuery orchestrator that allows us to query all of our hosts on demand for APT (Advanced Persistent Threat) IOC’s (Indicators Of Comprimise).
 
 Scheduled queries feed all of these results into a search Index. Osquery is even platform agnostic so we can deploy it across all endpoints, regardless of host OS.

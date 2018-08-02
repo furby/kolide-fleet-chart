@@ -28,22 +28,22 @@ And a set of query packs:
 
 ![EUC Intelligence](./docs/fleet-intel-platform.png)
 
-The initial UseCase for the Fleet platform is
-Systematically monitor EUC (End User Compute)
--   IOC's (Indicators of Comprimise)
--   Configuration Compliance
--   Operations issues & support
--   General fleet management & capacity management
+Some use-cases for the Kolide Fleet solution include:    
+Systematically monitor EUC (End User Compute)    
+-   IOC's (Indicators of Comprimise)    
+-   Configuration Compliance   
+-   Operations issues & support    
+-   General fleet management & capacity management    
 
-#### Kolide Fleet implements an OSQuery TLS Service
+#### Kolide Fleet implements an OSQuery TLS Service    
 
-Kolide Fleet is an Open Source Osquery Manager
+Kolide Fleet is an Open Source Osquery Manager  
 
 Kolide Fleet is an application that allows you to take advantage of the power of osquery
 in order to maintain constant insight into the state of your infrastructure (security, health, stability, performance, compliance, etc).
 
 https://kolide.com/fleet
-https://github.com/kolide/fleet/blob/master/docs/application/README.md
+https://github.com/kolide/fleet/blob/master/docs/application/README.md     
 
 ![Kolide Diagram](./docs/kolide.png)
 

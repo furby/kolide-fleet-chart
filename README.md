@@ -16,6 +16,8 @@ Follow the README.md for each sub-chart, install in this order:
 1. Install MySQL chart
 1. Install Fleet chart          
 
+---    
+
 We can automate endpoint security monitoring with a combination of OSQuery Packs targeting IOCs:
 
 And a set of query packs:
@@ -23,8 +25,6 @@ And a set of query packs:
 -   **Palantir OSQuery** : https://github.com/palantir/osquery-configuration
 -   **GSA Laptop Management** : https://github.com/GSA/laptop-management
 -   **FaceBook OSQuery** : https://osquery.io/chart    
-
----    
 
 ![EUC Intelligence](./docs/fleet-intel-platform.png)
 

@@ -50,15 +50,14 @@ https://github.com/kolide/fleet/blob/master/docs/application/README.md
 
 ![Kolide Diagram](./docs/kolide.png)
 
-#### Utilities
+#### Utilities   
 
--   **Build agent installer packages**    [package-build.sh](./docs/package-build.sh)
--   **Import OSQuery Pack files**   [fleetctl](https://github.com/gjyoung1974/kolide-packs)
-    Or Pack import tool examples: [Import examples](https://gist.github.com/marpaia/9e061f81fa60b2825f4b6bb8e0cd2c77)    
+-   **Build agent installer packages**    [package-build.sh](./docs/package-build.sh)   
+-   **Import OSQuery Pack files**   [fleetctl](https://github.com/gjyoung1974/kolide-packs)     
+-   **Pack import guidance:** [Import examples](https://gist.github.com/marpaia/9e061f81fa60b2825f4b6bb8e0cd2c77)   
 
 -   **Files to run stuff on Minikube** [minikube-files](./docs/minikube/)
-    **To run Elastic Stack on Minikube you must run the systcl pod to
-    increase shmmax m.max_map_count=262166**
+-   **To run Elastic Stack on Minikube you must run the systcl pod to increase shmmax m.max_map_count=262166**
 
 ```
 2018 ACME InfoSec

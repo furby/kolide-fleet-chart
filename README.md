@@ -29,9 +29,11 @@ And a set of query packs:
 ![EUC Intelligence](./docs/fleet-intel-platform.png)
 
 The initial UseCase for the Fleet platform is
--   Systematically monitor EUC (End User Compute) devices for IOCs
--   Systematically monitor IOT (Internet of Things) devices for IDS or IOCs
-
+Systematically monitor EUC (End User Compute)
+-   IOC's (Indicators of Comprimise)
+-   Configuration Compliance
+-   Operations issues & support
+-   General fleet management & capacity management
 
 #### Kolide Fleet is an OSQuery TLS Service
 
@@ -55,5 +57,5 @@ https://github.com/kolide/fleet/blob/master/docs/application/README.md
     increase shmmax m.max_map_count=262166**
 
 ```
-2018 acme InfoSec
+2018 ACME InfoSec
 ```

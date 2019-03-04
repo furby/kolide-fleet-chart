@@ -17,7 +17,11 @@ A flexible control server for osquery fleets. Fleet allows us query multiple hos
 Follow the README.md for each sub-chart, install in this order:    
 1. Install Redis chart        
 1. Install MySQL chart
-1. Install Fleet chart          
+1. Install Fleet chart  
+        
+```sh
+$ helm install --namespace fleet --name fleet fleet
+```
 
 ---    
 

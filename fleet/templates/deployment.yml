@@ -25,7 +25,7 @@ spec:
       containers:
       - command: ["/bin/sh","-c"]
         args: ["mkdir -p /var/log/osquery && fleet prepare db && fleet serve"]
-        image: kolide/fleet:2.0.0-rc3
+        image: {.Values.image}}: {.Values.imagetag}}
         imagePullPolicy: Always
         name: kolide-fleet
         env:

@@ -2,7 +2,7 @@
 image: "kolide/fleet"
 imageTag: "2.6.0"
 imagePullPolicy: IfNotPresent
-dnsHostName: "kolide.guysdomain.xyz"
+dnsHostName: "your.server.com"
 fleetName: kolide-fleet
 fleetSvcNodePort: '31099'
 fleetSvcExtPort: '8081'

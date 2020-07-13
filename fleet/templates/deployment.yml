@@ -37,7 +37,7 @@ spec:
                 key: mysql-password
                 name: fleet-mysql
           - name: KOLIDE_REDIS_ADDRESS
-            value: redis-cluster.fleet:6739
+            value: redis-cluster.fleet:6379
           - name: KOLIDE_REDIS_PASSWORD
             valueFrom:
               secretKeyRef:
@@ -49,7 +49,7 @@ spec:
                 key: fleet-server-auth-key
                 name: fleet-secrets
           - name: KOLIDE_SERVER_ADDRESS
-            value: 0.0.0.9:24
+            value: 0.0.0.0:2024
           - name: KOLIDE_SERVER_CERT
             value: /ssl/sslcert.pem/server-cert.pem
           - name: KOLIDE_SERVER_KEY

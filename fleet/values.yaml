@@ -2,7 +2,8 @@
 image: "kolide/fleet"
 imageTag: "2.6.0"
 imagePullPolicy: IfNotPresent
-dnsHostName: "server.acme.example.com"
+dnsHostName: "kolide.guysdomain.xyz"
+fleetName: kolide-fleet
 fleetSvcNodePort: '31099'
 fleetSvcExtPort: '8081'
 fleetSvcTargetPort: '2024'
@@ -97,13 +98,10 @@ fleet_private_key: |-
       Nf0jOSRm/T6Dc/hToXSZ/0DdK5wA0OPEjuta55mJnZKS3TvO5D45AOTI3RUsdt0x
       qWb0sQfv8TueUgBTTWFurhAy6tTbVPdHdchEdq42Z/9Z5ng/MeM0aA==
       -----END RSA PRIVATE KEY-----
-
-
-
 fleet_authkey: a1tSSyCxKQSo4nQzZBfj6HB8tV+L31kr
 redispass: password
 
-#issue a cert via let's encrypt
- certmanager:
+# ## or issue a cert via let's encrypt
+certmanager:
    issuer: letsencrypt-prod
    challengeProvider: http01

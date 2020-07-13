@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -25,41 +25,41 @@ spec:
       containers:
       - command: ["/bin/sh","-c"]
         args: ["mkdir -p /var/log/osquery && fleet prepare db && fleet serve"]
-        image: {.Values.image}}: {.Values.imagetag}}
-        imagePullPolicy: Always
         name: kolide-fleet
+        image: kolide/fleet:2.6.0
+        imagePullPolicy: Always
         env:
-        - name: KOLIDE_MYSQL_ADDRESS
-          value: mysql.fleet:3306
-        - name: KOLIDE_MYSQL_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              key: mysql-password
-              name: fleet-mysql
-        - name: KOLIDE_REDIS_ADDRESS
-          value: redis-cluster.fleet:6379
-        - name: KOLIDE_REDIS_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              key: redispass
-              name: redis-secrets
-        - name: KOLIDE_AUTH_JWT_KEY
-          valueFrom:
-            secretKeyRef:
-              key:  fleet-server-auth-key
-              name: fleet-secrets
-        - name: KOLIDE_SERVER_ADDRESS
-          value: 0.0.0.0:2024
-        - name: KOLIDE_SERVER_CERT
-          value: /ssl/sslcert.pem/server-cert.pem
-        - name: KOLIDE_SERVER_KEY
-          value: /ssl/sslkey.pem/server-key.pem
-        - name: KOLIDE_OSQUERY_STATUS_LOG_FILE
-          value: /var/log/osquery/osqueryd.status.log
-        - name: KOLIDE_OSQUERY_RESULT_LOG_FILE
-          value: /var/log/osquery/osqueryd.results.log
-        - name: KOLIDE_LOGGING_JSON
-          value: "true"
+          - name: KOLIDE_MYSQL_ADDRESS
+            value: mysql.fleet:3306
+          - name: KOLIDE_MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: mysql-password
+                name: fleet-mysql
+          - name: KOLIDE_REDIS_ADDRESS
+            value: redis-cluster.fleet:6739
+          - name: KOLIDE_REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: redispass
+                name: redis-secrets
+          - name: KOLIDE_AUTH_JWT_KEY
+            valueFrom:
+              secretKeyRef:
+                key: fleet-server-auth-key
+                name: fleet-secrets
+          - name: KOLIDE_SERVER_ADDRESS
+            value: 0.0.0.9:24
+          - name: KOLIDE_SERVER_CERT
+            value: /ssl/sslcert.pem/server-cert.pem
+          - name: KOLIDE_SERVER_KEY
+            value: /ssl/sslkey.pem/server-key.pem
+          - name: KOLIDE_OSQUERY_STATUS_LOG_FILE
+            value: /var/log/osquery/osqueryd.status.log
+          - name: KOLIDE_OSQUERY_RESULT_LOG_FILE
+            value: /var/log/osquery/osqueryd.results.log
+          - name: KOLIDE_LOGGING_JSON
+            value: "true"
         ports:
         - containerPort: 2024
           protocol: TCP
@@ -70,14 +70,6 @@ spec:
         - name: sslkey
           readOnly: true
           mountPath: /ssl/sslkey.pem
-      - image: mailhog/mailhog:latest
-        imagePullPolicy: Always
-        name: mailhog
-        ports:
-        - containerPort: 1025
-          protocol: TCP
-        - containerPort: 8025
-          protocol: TCP
       terminationGracePeriodSeconds: 30
       volumes:
       - name: sslcert
